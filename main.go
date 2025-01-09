@@ -32,6 +32,7 @@ func main() {
 	cmds.Register("follow", commands.MiddlewareLoggedIn(commands.HandleFollow))
 	cmds.Register("following", commands.MiddlewareLoggedIn(commands.HandleFollowing))
 	cmds.Register("unfollow", commands.MiddlewareLoggedIn(commands.HandleUnfollow))
+	cmds.Register("browse", commands.MiddlewareLoggedIn(commands.HandleBrowse))
 
 	if len(os.Args) < 2 {
 		fmt.Println("Error, Invalid number of arguments")
